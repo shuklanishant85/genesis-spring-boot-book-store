@@ -33,7 +33,7 @@ public class StoreController {
 		return bookRepository.findAll();
 	}
 
-	@GetMapping("/title/{bookTitle}")
+	@GetMapping("/title/{bookTitle:[a-zA-Z &+-]*}")
 	public List<Book> findByTitle(@PathVariable("bookTitle") String bookTitle) {
 		LOGGER.info("get request for Books against Book title {}", bookTitle);
 		return bookRepository.findByTitle(bookTitle);
