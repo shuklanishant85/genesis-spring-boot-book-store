@@ -1,5 +1,5 @@
 # genesis-spring-boot-book-store
-A book store project to explore the steps of bootstrapping a spring boot application.\
+A book store project to explore the steps of bootstrapping a spring boot application.
 
 ## Modules:
 1. Adding Starters to pom.
