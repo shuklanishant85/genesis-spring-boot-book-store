@@ -1,5 +1,5 @@
 # genesis-spring-boot-book-store
-A book store project to explore bootstrapping a spring boot application
+A book store project to explore the steps of bootstrapping a spring boot application.\
 
 ## Modules:
 1. Adding Starters to pom.
@@ -13,13 +13,13 @@ A book store project to explore bootstrapping a spring boot application
 9. Adding test cases for testing the application.
 
 ## Notes: 
-Spring-boot-bootstrap.txt file is present in the root direcory as/
+Spring-boot-bootstrap.txt file is present in the root direcory as\
 a cheat-code file for remembering the basic steps.
 
 ## Rest endpoints:
 | Request Mappings             | Method |  Endpoints          |
 | ---------------------------- | ------ | ------------------- |
-| /                            | GET    | request Home Page   |
+| /                            | GET    | Request Home Page   |
 | /api/book                    | GET    | Find All Books      |
 | /api/book/title/{bookTitle}  | GET    | Find Book By Title  |
 | /api/book/dummybook          | GET    | Get A Dummy Book    |
