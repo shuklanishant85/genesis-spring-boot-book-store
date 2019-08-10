@@ -1,0 +1,61 @@
+Spring Boot Bootstrap Application
+--------------------------------------
+
+Starters to add:
+	1. spring-boot-starter-parent
+	2. spring-boot-starter-web
+	3. spring-boot-starter-data-jpa
+	4. H2
+	5. spring-boot-starter-thymeleaf
+	6. spring-boot-starter-security
+
+Configuration:
+ @SpringBootApplication defines primary application configuration class.
+ That’s equivalent to @Configuration, @EnableAutoConfiguration, and @ComponentScan together.
+ SpringApplication.run(Application.class, args) returns the application context.
+
+Application properties:
+spring.thymeleaf.cache=false
+spring.thymeleaf.enabled=true
+spring.thymeleaf.prefix=classpath:/templates/
+spring.thymeleaf.suffix=.html
+spring.application.name=Book Store
+
+Controllers:
+Home Controller 
+Home.html
+
+Security:
+Once the spring-boot-starter-security dependency on the classpath of the application – all endpoints are secured by default, using either httpBasic or formLogin based on Spring Security’s content-negotiation strategy.
+That’s why, if we have the starter on the classpath, we should usually define our own custom Security configuration by extending the WebSecurityConfigurerAdapter class
+
+Persistence:
+Create Entity
+Create Repository extending Crud Repository
+Configure Persistence:
+	@EnableJpaRepositories to scan the specified package for repositories
+	@EntityScan to pick up our JPA entities
+	
+H2 in-memory database:
+Once we include H2 dependency, Spring Boot auto-detects it and sets up our persistence with no need for extra configuration, other than the data source properties:
+	spring.datasource.driver-class-name=org.h2.Driver
+	spring.datasource.url=jdbc:h2:mem:bootapp;DB_CLOSE_DELAY=-1
+	spring.datasource.username=sa
+	spring.datasource.password=
+	
+Controller:
+@RestController = @Controller + @ComponentScan + @ResponseBody
+Create a Controller Class.
+Autowire the repository object on the class.
+Override the crud methods
+
+Error Handling:
+@ControllerAdvice: ResponseEntityExceptionHandler
+@ExceptionHandler({List of exception classes}) 
+ResponseEntity<Object> handleBadRequess(Exception, WebRequest) 
+ResponseEntity<Object> handleNotFound(Exception, WebRequest)
+
+
+
+
+
