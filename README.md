@@ -27,3 +27,7 @@ a cheat-code file for remembering the basic steps.
 | /api/book                    | POST   | Add A New Book      |
 | /api/book/{id}               | DELETE | Delete A Book By Id |
 | /api/book/{id}               | PUT    | Update A Book By Id |
+
+#### Note: Book Store.postman_collection.json has been provided in
+#### root folder. The collection file contains the rest requests configured
+#### for testing along with dummy data.
